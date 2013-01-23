@@ -1,0 +1,23 @@
+//
+//  DVTextMessage.h
+//  iostest
+//
+//  Created by mogura on 12/8/12.
+//  Copyright (c) 2012 mogura. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface DVGameStatus : NSObject
+
+@property (nonatomic, copy) NSString *gameID;
+@property (nonatomic, strong) NSDate *createdAt;
+
+@property (nonatomic, copy) NSString *nextTurn;
+@property (nonatomic, strong) NSDictionary *lastUpdates;
+@property (nonatomic, assign) BOOL isGameOver;
+
+- (id)initWithDictionary:(NSDictionary *)dict;
+- (id)initWithJSONString:(NSString *)jsonString;
+
+@end
